@@ -9,12 +9,12 @@ using namespace std;
 
 class Menu
 {
+	friend ostream &operator << (ostream &, Menu &);
+
 	public:
 		Menu ();
 
 		void setMenu ();
-
-		void imprimeMenu ();
 
 	private:
 		vector <string> menu;

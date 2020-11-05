@@ -1,5 +1,12 @@
 #include "menu.h"
 
+ostream &operator << (ostream &out, Menu &m)
+{
+	for (unsigned i = 0; i < m.menu.size (); i++)
+		out << m.menu.at (i) << endl;
+	return out;
+}
+
 Menu::Menu () {}
 
 void Menu::setMenu ()
@@ -12,12 +19,3 @@ void Menu::setMenu ()
 		"6 - Buscar Aluno",
 		"0 - Sair do Programa"};
 }
-
-void Menu::imprimeMenu ()
-{
-	for (unsigned i = 0; i < menu.size (); i++)
-	{
-		cout << menu.at (i) << endl;
-	}
-}
-
