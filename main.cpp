@@ -6,5 +6,6 @@ int main ()
 	menu.setMenu ();
 	cout << menu;
 
+	cout << "Branch de teste" << endl;
 	return 0;
 }
