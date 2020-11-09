@@ -1,25 +1,30 @@
+#include <stdlib.h>
 #include <iostream>
+#include <vector>
 
+using namespace std;
 struct CadastroStruct
 {
 	string nome, dre, periodo;
-	Data *data;
-}
+	//Data *data;
+	friend ostream &operator << (ostream &, CadastroStruct *);
+};
 
 class Cadastro
 {
-	friend ostream &operator << (ostream &);
+	friend ostream &operator << (ostream &, Cadastro &);
 
 	public:
-		Cadastro (string, string, string);
+		Cadastro ();
+		
+		Cadastro &operator += (CadastroStruct &);
 
-		void setNome ();
-		void setDRE ();
-		//Data *getData ();
-		void setPeriodo ();
+		CadastroStruct getAluno ();
 
 	private:
-		string nome, dre, periodo;
-		vector <CadastroStruct *> cadastros;
+		string n, d, p;
+		vector <CadastroStruct*> cadastros;
+		CadastroStruct aluno;
+		unsigned atual;
 		//Data *data;
-}
+};
