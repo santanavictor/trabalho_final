@@ -15,9 +15,11 @@ class Menu
 		Menu ();
 
 		void setMenu ();
+		int escolher();
 
 	private:
 		vector <string> menu;
+		int escolha;
 };
 
 #endif

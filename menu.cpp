@@ -19,3 +19,10 @@ void Menu::setMenu ()
 		"6 - Buscar Aluno",
 		"0 - Sair do Programa"};
 }
+
+int Menu::escolher ()
+{
+	cin >> escolha;
+	return escolha;
+}
+
