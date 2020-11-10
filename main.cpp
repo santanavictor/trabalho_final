@@ -9,6 +9,13 @@ int main ()
 	Cadastro cadastro;
 	CadastroStruct add [10];
 
+	int escolha;
+
+	switch (escolha)
+	{
+		case 1:
+
+
 	cin.ignore ();
 	for (unsigned i = 0; i < 3; i++)
 	{
